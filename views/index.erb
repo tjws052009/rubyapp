@@ -1,9 +1,58 @@
+<!doctype html>
 <html>
-<head>
-    <title>Test Index</title>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <title>Test App</title>
+    <link rel="stylesheet" href="/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+
+    <style>
+        body {
+            padding-top: 4rem;
+        }
+    </style>
 </head>
 <body>
-    <h1>Hello there</h1>
-    <div>Testing CI/CD</div>
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
+        <a class="navbar-brand" href="#">Test App</a>
+    </nav>
+    <main class="container-fluid">
+        <div class="row">
+            <div class="col-2">
+                <h2>Get from Redis</h2>
+                <form id="getredis">
+                    <div class="form-group">
+                        <label for="getkey">Key</label>
+                        <input id="getkey" name="key" class="form-control" type="text">
+                    </div>
+                    <input class="btn btn-primary" type="submit" value="Send">
+                </form>
+            </div>
+            <div class="col-1"></div>
+            <div class="col-2">
+                <h2>Store in Redis</h2>
+                <form id="setredis">
+                    <div class="form-group">
+                        <label for="setkey">Key</label>
+                        <input id="setkey" name="key" class="form-control" type="text">
+                    </div>
+                    <div class="form-group">
+                        <label for="setvalue">Value</label>
+                        <input id="setvalue" name="value" class="form-control" type="text">
+                    </div>
+                    <input class="btn btn-primary" type="submit" value="Send">
+                </form> 
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-2">
+                <h2>Result</h2>
+                <div id="result"></div>
+            </div>
+        </div>
+    </main>
+    <script src="/js/main.js"></script>
 </body>
 </html>
